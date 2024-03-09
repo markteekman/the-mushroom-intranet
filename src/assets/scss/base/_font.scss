@@ -1,0 +1,143 @@
+// | -------------------------------------------------------------
+// | Font
+// | -------------------------------------------------------------
+
+@use 'breakpoint' as *;
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: local('Ubuntu Regular'), local('Ububtu-Regular'),
+    url('/the-mushroom-intranet/fonts/Ubuntu-Regular.woff2') format('woff2'),
+    url('/the-mushroom-intranet/fonts/Ubuntu-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: local('Ubuntu Medium'), local('Ubuntu-Medium'),
+    url('/the-mushroom-intranet/fonts/Ubuntu-Medium.woff2') format('woff2'),
+    url('/the-mushroom-intranet/fonts/Ubuntu-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url('/the-mushroom-intranet/fonts/Ubuntu-Bold.woff2') format('woff2'),
+    url('/the-mushroom-intranet/fonts/Ubuntu-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  color: var(--primary-marine-blue);
+  font-family: var(--font-body);
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-rendering: optimizeLegibility;
+  font-synthesis: none;
+  font-size: var(--font-size-0);
+  line-height: 1.5rem;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  a:not(.button) {
+    color: var(--action-color);
+    text-decoration: underline;
+
+    &:visited {
+      color: var(--action-color);
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--action-color-state);
+      text-decoration: none;
+    }
+  }
+
+  :where(main) a {
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+  :where(h1, h2) {
+    font-family: var(--font-heading);
+  }
+
+  h1,
+  h2 {
+    font-weight: 800;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 3.625rem;
+
+    @include breakpoint(medium) {
+      font-size: 2.25rem;
+      line-height: 3.375rem;
+    }
+  }
+
+  h2 {
+    font-size: 2.25rem;
+    line-height: 3.375rem;
+
+    @include breakpoint(medium) {
+      font-size: 1.875rem;
+      line-height: 2.8125rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.875rem;
+    line-height: 2.8125rem;
+
+    @include breakpoint(medium) {
+      font-size: 1.5rem;
+      line-height: 2.25rem;
+    }
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+
+    @include breakpoint(medium) {
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+    }
+  }
+
+  h5 {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+
+    @include breakpoint(medium) {
+      font-size: 1.125rem;
+      line-height: 1.6875rem;
+    }
+  }
+
+  h6 {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+
+    @include breakpoint(medium) {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+}
