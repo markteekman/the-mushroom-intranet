@@ -21,8 +21,15 @@ export const useUsersStore = defineStore('users', () => {
       id: 3,
       name: 'Donkey Kong',
       username: 'donkeykong',
-      password: 'banana',
+      password: 'bananas',
       avatar: 'donkey-kong-avatar.png',
+    },
+    {
+      id: 4,
+      name: 'Princess Peach',
+      username: 'princesspeach',
+      password: 'anothercastle',
+      avatar: 'princess-peach-avatar.png',
     },
   ])
   const isLoggedIn = ref(false)
