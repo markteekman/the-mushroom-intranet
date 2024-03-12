@@ -1,1 +1,33 @@
-<h1>Login</h1>
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import LoginForm from '../components/LoginForm.vue'
+---
+
+<DefaultLayout title="Login">
+  <div class="login-wrapper">
+    <div class="login-inner">
+      <h1 class="sr-only">Login</h1>
+      <img
+        class="h-35 w-35 mb-5"
+        src="/the-mushroom-intranet/mushroom-red.png"
+        alt=""
+      />
+      <LoginForm client:load />
+    </div>
+  </div>
+</DefaultLayout>
+
+<style>
+  .login-wrapper {
+    display: grid;
+    place-items: center;
+    block-size: 100vh;
+  }
+
+  .login-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+</style>

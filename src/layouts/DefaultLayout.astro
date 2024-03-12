@@ -3,11 +3,10 @@ import '@astrojs/tailwind/base.css'
 import '../assets/scss/globals.scss'
 import SiteMeta from '../components/SiteMeta.astro'
 import ConsoleFiglet from '../components/ConsoleFiglet.astro'
-import ModalDialog from '../components/ModalDialog.astro'
 
 const {
-  title = 'Multi Step Form',
-  description = 'Frontend Mentor challenge Multi-step form using Astro, Vue 3, Pinia and WCAG best practises such as error handeling and screen reader feedback.',
+  title = 'The Mushroom Intranet',
+  description = 'This is a demo intranet environment with a Super Mario theme.',
   url = 'https://markteekman.github.io/the-mushroom-intranet/',
   image = 'the-mushroom-intranet/social-preview-image.png',
   author = 'Mark Teekman',
@@ -53,28 +52,13 @@ const {
 
   <body style="background-color: var(--neutral-magnolia);">
     <div class="wrapper">
-      <main
-        id="main-content"
-        class="relative grid place-items-center"
-      >
+      <main id="main-content">
         <slot />
       </main>
       <footer class="px-8 py-4 text-center text-sm">
         Coded by <a href="https://markteekman.nl">Mark Teekman</a>.
       </footer>
     </div>
-    <ModalDialog
-      triggerId="modal-trigger"
-      title="Accessibility notice"
-    >
-      <p>
-        I've done my best to make this form as accessible as possible by using focus management, error handling and
-        screen reader feedback. However I'm always learning new things and I'm open to feedback. If you have any
-        suggestions or if you find any issues, please let me know by submitting an issue at the <a
-          href="https://github.com/markteekman/the-mushroom-intranet/issues">GitHub repository</a
-        > for this project. Thank you! 🚀
-      </p>
-    </ModalDialog>
     <ConsoleFiglet />
   </body>
 </html>

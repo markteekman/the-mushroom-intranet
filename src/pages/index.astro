@@ -1,7 +1,40 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro'
+import SiteHeader from '../components/SiteHeader.vue'
+import TimelineWrapper from '../components/TimelineWrapper.vue'
 ---
 
-<DefaultLayout title="The Mushroom Intranet">
-  <h1>The Mushroom Intranet</h1>
+<DefaultLayout title="Home">
+  <SiteHeader client:load />
+  <div class="relative grid place-items-center">
+    <h1 class="flex items-center gap-4">
+      <img
+        class="h-20 w-20"
+        src="/the-mushroom-intranet/mushroom-red.png"
+        alt=""
+      />
+      Message Board
+      <img
+        class="h-20 w-20"
+        src="/the-mushroom-intranet/mushroom-green.png"
+        alt=""
+      />
+    </h1>
+    <TimelineWrapper client:load />
+  </div>
 </DefaultLayout>
+
+<script>
+  let isLoggedIn = await localStorage.getItem('isLoggedIn')
+
+  if (isLoggedIn === null) {
+    window.location.href = 'the-mushroom-intranet/login'
+  }
+</script>
+
+<style>
+  h1 {
+    margin-block: var(--space-m);
+    text-align: center;
+  }
+</style>
