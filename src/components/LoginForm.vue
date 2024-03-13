@@ -19,7 +19,7 @@ const handleSubmit = () => {
         <input
           id="username"
           type="text"
-          placeholder="Hint: princesspeach"
+          placeholder="Hint: donkeykong"
           v-model="username"
         />
       </div>
@@ -28,7 +28,7 @@ const handleSubmit = () => {
         <input
           id="password"
           type="password"
-          placeholder="Hint: inanothercastle"
+          placeholder="Hint: bananas"
           v-model="password"
         />
       </div>
