@@ -51,8 +51,9 @@ const postsStore = usePostsStore()
 
   &__buttons {
     display: flex;
+    justify-content: center;
     gap: var(--space-2xs);
-    font-size: var(--font-size--2);
+    font-size: 0.85rem;
     font-weight: bold;
   }
 
