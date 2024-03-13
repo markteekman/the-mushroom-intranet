@@ -26,9 +26,10 @@ import TimelineWrapper from '../components/TimelineWrapper.vue'
 
 <script>
   let isLoggedIn = await localStorage.getItem('isLoggedIn')
+  const baseURL = window.location.href.includes('the-mushroom-intranet') ? '/the-mushroom-intranet/' : '/'
 
   if (isLoggedIn === null) {
-    window.location.href = 'the-mushroom-intranet/login'
+    window.location.href = `${baseURL}login`
   }
 </script>
 

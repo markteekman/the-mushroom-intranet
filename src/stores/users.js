@@ -36,6 +36,7 @@ export const useUsersStore = defineStore('users', () => {
   const loggedInUser = ref(null)
 
   function checkLogin(username, password) {
+    const baseURL = window.location.href.includes('the-mushroom-intranet') ? '/the-mushroom-intranet/' : '/'
     const user = users.value.find((user) => user.username.toLowerCase() === username)
     if (user && user.password === password) {
       alert('Logged in!')
@@ -43,17 +44,18 @@ export const useUsersStore = defineStore('users', () => {
       localStorage.setItem('isLoggedIn', true)
       localStorage.setItem('loggedInUser', JSON.stringify(user))
       loggedInUser.value = user
-      window.location.href = 'the-mushroom-intranet'
+      window.location.href = `${baseURL}`
     } else {
       alert(`Invalid username or password, try ${users.value[0].username} with ${users.value[0].password}.`)
     }
   }
 
   const logout = () => {
+    const baseURL = window.location.href.includes('the-mushroom-intranet') ? '/the-mushroom-intranet/' : '/'
     isLoggedIn.value = false
     localStorage.setItem('isLoggedIn', false)
     loggedInUser.value = null
-    window.location.href = 'the-mushroom-intranet/login'
+    window.location.href = `${baseURL}login`
   }
 
   const updateFromLocalStorage = () => {
