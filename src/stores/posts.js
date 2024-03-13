@@ -21,7 +21,7 @@ export const usePostsStore = defineStore('posts', () => {
           date: '03-09-24',
         },
         {
-          content: "Sure, I'll be there around 9PM 👌",
+          content: "Sure, I'll be there around 9PM 🍌",
           author: 'Donkey Kong',
           date: '03-09-24',
         },
