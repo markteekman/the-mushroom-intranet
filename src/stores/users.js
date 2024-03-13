@@ -28,7 +28,7 @@ export const useUsersStore = defineStore('users', () => {
       id: 4,
       name: 'Princess Peach',
       username: 'princesspeach',
-      password: 'anothercastle',
+      password: 'inanothercastle',
       avatar: 'princess-peach-avatar.png',
     },
   ])

@@ -20,6 +20,11 @@ export const usePostsStore = defineStore('posts', () => {
           author: 'Mario',
           date: '03-09-24',
         },
+        {
+          content: "Sure, I'll be there around 9PM 👌",
+          author: 'Donkey Kong',
+          date: '03-09-24',
+        },
       ],
     },
     {
@@ -30,7 +35,7 @@ export const usePostsStore = defineStore('posts', () => {
       categories: ['Mario Party'],
       replies: [
         {
-          content: "Nice, I'd like tot test it out!",
+          content: "Nice, I'd like tot test it out! ❤️",
           author: 'Princess Peach',
           date: '03-03-24',
         },
