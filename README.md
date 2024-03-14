@@ -20,3 +20,4 @@ The Mushroom Intranet is a Super Mario themed demo web application that allows u
 - Separation of the logic for replies in their own components
 - Sending, storing and retrieving data to a (mockup) backend
 - Toggle button to show / hide (more) replies
+- For users to be able to edit and delete posts and comments
